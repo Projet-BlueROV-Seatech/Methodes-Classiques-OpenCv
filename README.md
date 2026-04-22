@@ -2,7 +2,7 @@
 
 Ce dossier contient nos premiers essais pour détecter le BlueROV2 en utilisant des algorithmes classiques de traitement d'images (OpenCV). Nous avons testé ces méthodes avant de nous rendre compte qu'il fallait passer par une IA (YOLO) pour contrer les reflets de l'eau.
 
-> 📁 Ce repo est une **archive d'exploration**. Pour la détection finale qui fonctionne vraiment en bassin, rendez-vous sur le [repo principal du projet](lien_vers_repo_principal).
+> Ce repo est une **archive d'exploration**. Pour la détection finale qui fonctionne vraiment en bassin, rendez-vous sur le [repo principal du projet](lien_vers_repo_principal).
 
 ---
 
@@ -43,7 +43,7 @@ pip install opencv-python numpy mss
   2. Deux fenêtres s'ouvrent : la vue caméra avec la bounding box, et le masque HSV pour débugger.
   3. Pour arrêter, appuyez sur `q`.
 
-  > ⚙️ **À adapter :** La zone de capture est définie ligne 5 du script (`zone_capture`). Modifiez `top`, `left`, `width` et `height` selon votre résolution d'écran.
+  >  **À adapter :** La zone de capture est définie ligne 5 du script (`zone_capture`). Modifiez `top`, `left`, `width` et `height` selon votre résolution d'écran.
 
 * **Pourquoi on l'a abandonné :** Sous l'eau, le robot est loin d'être le seul objet sombre à l'écran. Il confond facilement le châssis noir avec son ombre sur le fond du bassin ou avec des reflets sombres en surface.
 
@@ -72,7 +72,7 @@ pip install opencv-python numpy mss
   2. Modifiez la ligne `cv2.VideoCapture('BillyBassinX2.mov')` avec le chemin vers votre fichier vidéo.
   3. Lancez le code.
 
-  > 💡 **Pour un autre robot :** remplacez les images du dossier `imagesCAO2/` par des vues de votre propre objet (plusieurs angles, fond neutre de préférence).
+  >  **Pour un autre robot :** remplacez les images du dossier `imagesCAO2/` par des vues de votre propre objet (plusieurs angles, fond neutre de préférence).
 
 * **Pourquoi on l'a abandonné :** La coque du BlueROV2 est lisse et uniforme, et l'eau "lisse" encore plus les contrastes. ORB ne trouve pas de points d'accroche sur une surface sans texture, et finit par matcher les reflets à la place du robot.
 
@@ -90,7 +90,7 @@ pip install opencv-python numpy mss
   3. Le système affiche "Recherche en cours..." jusqu'à valider le robot, puis bascule automatiquement en mode suivi.
   4. Pour arrêter, appuyez sur `q`.
 
-  > ⚙️ **À adapter :**
+  >  **À adapter :**
   > - La zone de capture est définie ligne 33 (`capture_zone`). Ajustez-la à votre écran.
   > - Le seuil de validation ORB est `max_good_matches > 100` (ligne ~100). Si la détection ne démarre jamais, baissez ce seuil à 30–50.
 
