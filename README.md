@@ -2,8 +2,6 @@
 
 Ce dossier contient nos premiers essais pour détecter le BlueROV2 en utilisant des algorithmes classiques de traitement d'images (OpenCV). Nous avons testé ces méthodes avant de nous rendre compte qu'il fallait passer par une IA (YOLO) pour contrer les reflets de l'eau.
 
-> Ce repo est une **archive d'exploration**. Pour la détection finale qui fonctionne vraiment en bassin, rendez-vous sur le [repo principal du projet](lien_vers_repo_principal).
-
 ---
 
 ## Structure du projet
